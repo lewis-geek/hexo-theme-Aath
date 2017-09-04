@@ -1,7 +1,29 @@
 header {
-  @include basic;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #909090;
+  margin-bottom: 15px;
   .header-container {
+    @include basic;
     display: flex;
+    font-size: 1.15em;
+    justify-content: space-between;
     align-items: center;
+    .logo {
+      color: $hover-color;
+    }
+    .right-header {
+      align-self: right;
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 18px;
+      }
+      .nav-item {
+        .active {
+          color: $hover-color;
+        }
+      }
+    }
   }
 }
