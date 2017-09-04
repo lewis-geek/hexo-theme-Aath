@@ -1,3 +1,6 @@
+$hover-color: #007fff;
+$transition: .3s all;
+
 @mixin basic {
   width: 1000px;
   padding: 0 16px;
@@ -10,6 +13,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f4f5f5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #909090;
 }
 
 main {
