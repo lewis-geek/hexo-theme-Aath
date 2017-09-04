@@ -1,0 +1,21 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  # Home: /
+  # About: /about
+  # Archives: /archives
+  # Tags: /tags
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/style.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/script.js
