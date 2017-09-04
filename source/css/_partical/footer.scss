@@ -1,6 +1,12 @@
 footer {
-  @include basic;
   .copyright {
+    @include basic;
     display: flex;
+    line-height: 3em;
+    a {
+      &:hover {
+        color: $hover-color;
+      }
+    }
   }
 }
