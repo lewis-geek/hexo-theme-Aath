@@ -1,0 +1,20 @@
+<main id='index'>
+  <div class="posts-list">
+    <% page.posts.forEach(post => {%>
+      <section>
+        <a href="<%- url_for(post.path) %>">
+          <h3 class='post-head'>
+            <%- post.title %>
+          </h3>
+        </a>
+        发表于 <time><%-date(post.date, "YYYY-MM-DD")%></time> |
+        <% if (post.tags && post.tags.length) { %>
+          <%- partial('_partial/tag', { tags: post.tags }) %>
+        <% } %>
+      </section>
+    <%})%>
+    <% if (page.total > 1){ %>
+      <%- partial('_partial/paging') %>
+    <% } %>
+  </div>
+</main>

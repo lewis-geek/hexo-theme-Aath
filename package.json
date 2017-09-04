@@ -1,0 +1,7 @@
+{
+  "name": "lewisblog",
+  "version": "0.0.0",
+  "description": "lewisblog hexo theme",
+  "private": true,
+  "dependencies": {}
+}

@@ -1,0 +1,6 @@
+footer {
+  @include basic;
+  .copyright {
+    display: flex;
+  }
+}
