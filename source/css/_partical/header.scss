@@ -3,6 +3,7 @@ header {
   border-bottom: 1px solid #f1f1f1;
   color: #909090;
   margin-bottom: 15px;
+  box-shadow: $box-shadow;
   .header-container {
     @include basic;
     display: flex;
