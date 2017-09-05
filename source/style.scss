@@ -1,5 +1,6 @@
 $hover-color: #007fff;
 $transition: .3s all;
+$box-shadow: 0 2px 5px -2px rgba(0,0,0,.05);
 
 @mixin basic {
   width: 1000px;
@@ -32,3 +33,4 @@ main {
 
 @import 'css/post';
 @import 'css/index';
+@import 'css/tags.scss';

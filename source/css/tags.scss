@@ -1,0 +1,78 @@
+#tags {
+  .tags-container {
+    width: 660px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .tags {
+    // margin: 20px 0 15px 0;
+    padding: 25px 25px 20px;
+    border-bottom: 1px solid rgba(178, 186, 194, .15);
+    a,
+    .tag {
+      display: inline-block;
+      border-radius: 999em;
+      padding: 0 10px;
+      color: #ffffff;
+      line-height: 24px;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 0 1px;
+      margin-bottom: 6px;
+      background-color: rgb(187, 187, 238);
+      transition: $transition;
+      &:hover,
+      &:active {
+        color: white;
+        background-color: $hover-color;
+      }
+    }
+  }
+  .tag-list {
+    padding: 20px 25px 15px;
+    border-bottom: 1px solid rgba(178, 186, 194, .15);
+    .listing-seperator {
+      color: $hover-color;
+      .tag-text {
+        font-weight: 200;
+        line-height: 1.7;
+      }
+    }
+    .post-preview {
+      margin-left: 16px;
+      h2.post-title {
+        color: rgb(64, 64, 64);
+        transition: $transition;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+  .post-preview {
+    position: relative;
+    &> {
+      .post-meta {
+        position: absolute;
+        right: 5px;
+        bottom: 0px;
+        margin: 0px;
+        font-size: 12px;
+        line-height: 12px;
+      }
+      a {
+        .post-title {
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 20px;
+        }
+        .post-subtitle {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
