@@ -3,6 +3,7 @@ footer {
     @include basic;
     display: flex;
     line-height: 3em;
+    color: #BABABA;
     a {
       &:hover {
         color: $hover-color;
