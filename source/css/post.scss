@@ -1,7 +1,8 @@
-article {
-  // margin: 47px auto 0;
-  padding: 0 0;
-  width: 660px;
+#post {
+  article {
+    @include left-container;
+    padding: 20px 25px;
+  }
 }
 
 .markdown-body {

@@ -3,14 +3,10 @@
     list-style: none;
   }
   .posts-list {
-    width: 660px;
-    border-radius: 2px;
-    box-shadow: $box-shadow;
-    overflow: hidden;
+    @include left-container;
     section {
       padding: 20px 25px;
       border-bottom: 1px solid rgba(178,186,194,.15);
-      background-color: #ffffff;
       a {
         color: #404040;
         &:hover {

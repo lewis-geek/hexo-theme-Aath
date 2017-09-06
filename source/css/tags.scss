@@ -1,11 +1,7 @@
 #tags {
   .tags-container {
-    width: 660px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    box-shadow: $box-shadow;
-    overflow: hidden;
-    box-sizing: border-box;
+    @include left-container;
+    padding: 0;
   }
   .tags {
     padding: 25px 25px 20px;
