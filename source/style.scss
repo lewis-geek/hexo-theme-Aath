@@ -8,6 +8,15 @@ $box-shadow: 0 2px 5px -2px rgba(0,0,0,.05);
   margin: 0 auto;
 }
 
+@mixin left-container {
+  width: 660px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
   margin: 0;
@@ -25,12 +34,14 @@ a {
 
 main {
   flex-grow: 1;
+  display: flex;
   @include basic;
 }
 
 @import 'css/_partical/footer.scss';
 @import 'css/_partical/header';
 
+@import 'css/archive.scss';
 @import 'css/post';
 @import 'css/index';
 @import 'css/tags.scss';
