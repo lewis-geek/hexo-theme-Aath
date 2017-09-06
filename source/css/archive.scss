@@ -1,0 +1,35 @@
+#archive {
+  .container {
+    @include left-container;
+    .year-list {
+      padding: 20px 25px 15px;
+      border-bottom: 1px solid rgba(178, 186, 194, .15);
+      h3 {
+        margin: 0 0 5px;
+        color: #404040;
+        font-size: 25px;
+      }
+      ul {
+        margin: 0;
+        color: #404040;
+        font-weight: 200;
+        padding-left: 0;
+        li {
+          list-style: none;
+          margin-bottom: 5px;
+          time {
+            text-align: right;
+          }
+          a {
+            margin-left: 10px;
+            font-weight: normal;
+            transition: $transition;
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
