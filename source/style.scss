@@ -35,6 +35,7 @@ a {
 main {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   @include basic;
 }
 
@@ -42,6 +43,7 @@ main {
 @import 'css/_partical/header';
 
 @import 'css/archive.scss';
+@import 'css/about.scss';
 @import 'css/post';
 @import 'css/index';
 @import 'css/tags.scss';
