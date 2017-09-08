@@ -2,6 +2,16 @@
   article {
     @include left-container;
     padding: 20px 25px;
+    border-bottom: 1px solid rgba(178, 186, 194, .15);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .comment {
+    @include left-container;
+    padding: 20px 25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    flex-grow: 1;
   }
 }
 
