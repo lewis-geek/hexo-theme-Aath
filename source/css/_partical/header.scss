@@ -10,15 +10,19 @@ header {
     font-size: 1.15em;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
     .logo {
       color: $hover-color;
     }
     .right-header {
-      align-self: right;
+      margin: 0;
       li {
         list-style: none;
         display: inline-block;
         padding: 0 18px;
+        &:last-child {
+          padding-right: 25px;
+        }
       }
       .nav-item {
         .active {
