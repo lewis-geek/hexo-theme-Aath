@@ -1,14 +1,20 @@
 <main id='post'>
-  <article>
-    <section class="content markdown-body"><%- page.content %></section>
-  </article>
-  <% if(config['disqus_shortname']) { %>
-    <!-- disqus 评论框 start -->
-    <div class="comment">
-        <div id="disqus_thread" class="disqus-thread"></div>
-    </div>
-    <!-- disqus 评论框 end -->
-    <% } %>
+  <div class="content">
+    <article>
+        <section class="content markdown-body"><%- page.content %></section>
+    </article>
+    <% if(config['disqus_shortname']) { %>
+        <!-- disqus 评论框 start -->
+        <div class="comment">
+            <div id="disqus_thread" class="disqus-thread"></div>
+        </div>
+        <!-- disqus 评论框 end -->
+    <% } %>    
+  </div>
+  <aside>
+    <h1>目录</h1>
+    <%- toc(page.content) %>
+  </aside>
 </main>
 <% if(config['disqus_shortname']) { %>
 <!-- disqus 公共JS代码 -->

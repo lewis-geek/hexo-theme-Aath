@@ -1,17 +1,58 @@
 #post {
-  article {
-    @include left-container;
-    padding: 20px 25px;
-    border-bottom: 1px solid rgba(178, 186, 194, .15);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .content {
+    article {
+      @include left-container;
+      padding: 20px 25px;
+      border-bottom: 1px solid rgba(178, 186, 194, .15);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    > .comment {
+      @include left-container;
+      padding: 20px 25px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      flex-grow: 1;
+    }
   }
-  > .comment {
-    @include left-container;
+  aside {
+    margin-left: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
     padding: 20px 25px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    flex-grow: 1;
+    width: 325px;
+    position: sticky;
+    top: 15px;
+    align-self: flex-start;
+    h1 {
+      font-size: 1.5em;
+      border-bottom: 1px solid #eaecef;
+      margin: 0 0 16px;
+      padding-bottom: 0.3em;
+      line-height: 1.25;
+    }
+    ol {
+      list-style: none;
+      &.toc {
+        margin-top: 0;
+        padding-left: 0;
+        .toc-level-1 {
+          > ol {
+            padding-left: 1.1em;
+          }
+        }
+        .toc-level-2 {
+          > ol {
+            padding-left: 1.2em;
+          }
+        }
+        .toc-level-3 {
+          > ol {
+            padding-left: 2em;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -218,7 +259,8 @@
   table {
     display: block;
     width: 100%;
-    overflow: auto
+    overflow: auto;
+    border-collapse:collapse;
   }
   table th {
     font-weight: 600
@@ -365,7 +407,12 @@
     border: 0
   }
   .highlight {
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    table {
+      tr {
+        border-top: none;
+      }
+    }
   }
   .highlight pre {
     margin-bottom: 0;
