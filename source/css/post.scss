@@ -6,7 +6,7 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .comment {
+  > .comment {
     @include left-container;
     padding: 20px 25px;
     border-top-left-radius: 0;
