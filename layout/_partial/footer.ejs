@@ -8,3 +8,45 @@
     </div>
   </div>
 </footer>
+
+<%if(is_post() || is_current('about')) { %>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+<script>
+  $("article img").each(function() {
+      var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+      $(this).wrapAll(strA);
+  });
+  /**
+  {
+    let ticking = true
+    let aside = document.querySelector('aside')
+    
+    function onScroll(e) {
+      if(ticking) {
+        ticking = false
+        requestAnimationFrame(timestamp => {
+          ticking = true
+          update()
+        })
+      }
+    }
+
+    function update() {
+      let y = window.scrollY
+      console.log(y)
+      
+      if(y >= 65) {
+        aside.classList.add('fixed')
+      } else {
+        aside.classList.remove('fixed')
+      }
+    }
+
+    window.addEventListener('scroll', e => {
+      onScroll(e)
+    })
+    **/
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+<% } %>
