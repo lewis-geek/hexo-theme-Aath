@@ -52,6 +52,12 @@
           }
         }
       }
+      a {
+        transition: $transition;
+        &:hover {
+          color: $hover-color;
+        }
+      }
     }
   }
 }
