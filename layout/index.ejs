@@ -33,4 +33,10 @@
       <%- partial('_partial/paging') %>
     <% } %>
   </div>
+  <aside>
+    <form action="//www.google.com/search" target="_blank" class="search-form">
+      <input type="text" name="q" maxlength="20" placeholder="搜索">
+      <input type="hidden" name='sitesearch' value="<%- config.url %>">
+    </form>
+  </aside>
 </main>

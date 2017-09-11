@@ -16,14 +16,7 @@
     }
   }
   aside {
-    margin-left: 15px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    padding: 20px 25px;
-    width: 325px;
-    position: sticky;
-    top: 15px;
-    align-self: flex-start;
+    @include aside;
     h1 {
       font-size: 1.5em;
       border-bottom: 1px solid #eaecef;
