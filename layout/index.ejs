@@ -34,9 +34,21 @@
     <% } %>
   </div>
   <aside>
-    <form action="//www.google.com/search" target="_blank" class="search-form">
-      <input type="text" name="q" maxlength="20" placeholder="搜索">
-      <input type="hidden" name='sitesearch' value="<%- config.url %>">
-    </form>
+    <div class="search">
+      <form action="//www.google.com/search" target="_blank" class="search-form">
+        <input type="text" name="q" maxlength="20" placeholder="搜索">
+        <input type="hidden" name='sitesearch' value="<%- config.url %>">
+      </form>
+    </div>
+    <% if(config.links) { %>
+      <div class="links">
+        <h1>
+          <i class="fa fa-heart-o" aria-hidden="true"> 友情链接</i>
+        </h1>
+        <% for(let i in config.links) { %>
+          <a href="<%- config.links[i] %>"><%- i %></a>
+        <% } %>
+      </div>
+    <% } %>
   </aside>
 </main>
