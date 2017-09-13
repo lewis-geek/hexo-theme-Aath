@@ -13,7 +13,9 @@
   </div>
   <aside>
     <h1>目录</h1>
-    <%- toc(page.content) %>
+    <div class="content">
+      <%- toc(page.content) %>
+    </div>
   </aside>
 </main>
 <% if(config['disqus_shortname']) { %>

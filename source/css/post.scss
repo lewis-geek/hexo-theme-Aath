@@ -18,16 +18,23 @@
   aside {
     @include aside;
     h1 {
-      font-size: 1.5em;
-      border-bottom: 1px solid #eaecef;
-      margin: 0 0 16px;
-      padding-bottom: 0.3em;
-      line-height: 1.25;
+      font-size: 1.1em;
+      padding-left: 20px;
+      margin: 0;
+      height: 45px;
+      line-height: 45px;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(178,186,194,.15);
+      font-weight: normal;
+    }
+    .content {
+      padding: 20px;
+      font-size: 1em;
     }
     ol {
       list-style: none;
       &.toc {
-        margin-top: 0;
+        margin: 0;
         padding-left: 0;
         .toc-level-1 {
           > ol {
