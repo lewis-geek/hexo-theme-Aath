@@ -7,7 +7,13 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- config.favicon %>">
   <% } %>
-  <title><% if (page.title){ %><%= page.title %> | <% } %><%= config.title %></title>
+  <%
+    var title = page.title;
+    if (is_archive()){
+      title = '归档';
+    }
+  %>  
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <%- css('style') %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
