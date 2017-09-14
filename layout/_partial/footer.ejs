@@ -10,12 +10,21 @@
 </footer>
 
 <%if(is_post() || is_current('about')) { %>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
   $("article img").each(function() {
       var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
       $(this).wrapAll(strA);
   });
+
+  $('.toc-link').each(function() {
+      this.onclick = function(e) {
+        var href = $(this).attr("href");
+        var pos = $(href).offset().top - 10;
+        $("html,body").animate({scrollTop: pos}, 300);	
+        return false
+      }
+  })
   /**
   {
     let ticking = true
