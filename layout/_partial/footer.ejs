@@ -11,51 +11,58 @@
 
 <%if(is_post() || is_current('about')) { %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://olnzpdi2u.bkt.clouddn.com/in-view.min.js"></script>
 <script>
+  var isDown = true
+  var scrollY = 0
+  inView.offset(50)
+
+  window.addEventListener('scroll', e => {
+    var currentY = window.scrollY
+    if((scrollY - currentY) < 0) {
+      isDown = true
+    } else {
+      isDown = false
+    }
+    scrollY = currentY
+  })
+
   $("article img").each(function() {
       var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
       $(this).wrapAll(strA);
   });
 
   $('.toc-link').each(function() {
+      var href = $(this).attr("href");
+      
+      inView(href).on('exit', () => {
+        if (isDown) {
+          handleActive(href)
+        }
+      })
+
+      inView(href).on('enter', () => {
+        if (!isDown) {
+          handleActive(href)
+        }
+      })
+
       this.onclick = function(e) {
-        var href = $(this).attr("href");
         var pos = $(href).offset().top - 10;
-        $("html,body").animate({scrollTop: pos}, 300);	
+        $("html,body").animate({scrollTop: pos}, 300);
+        setTimeout(() => {
+          handleActive(href)
+        }, 350)
         return false
       }
   })
-  /**
-  {
-    let ticking = true
-    let aside = document.querySelector('aside')
-    
-    function onScroll(e) {
-      if(ticking) {
-        ticking = false
-        requestAnimationFrame(timestamp => {
-          ticking = true
-          update()
-        })
-      }
-    }
 
-    function update() {
-      let y = window.scrollY
-      console.log(y)
-      
-      if(y >= 65) {
-        aside.classList.add('fixed')
-      } else {
-        aside.classList.remove('fixed')
-      }
-    }
-
-    window.addEventListener('scroll', e => {
-      onScroll(e)
+  function handleActive(href) {
+    document.querySelectorAll('.toc-link').forEach(elm => {
+      elm.classList.remove('active')
     })
+    document.querySelector(".toc [href='"+ href +"']").classList.add('active')
   }
-  **/
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
 <% } %>

@@ -54,7 +54,8 @@
       }
       a {
         transition: $transition;
-        &:hover {
+        &:hover,
+        &.active {
           color: $hover-color;
         }
       }
