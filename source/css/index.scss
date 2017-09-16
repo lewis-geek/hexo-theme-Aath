@@ -4,6 +4,7 @@
   }
   .posts-list {
     @include left-container;
+    flex-basis: 66%;
     section {
       padding: 20px 25px;
       border-bottom: 1px solid rgba(178,186,194,.15);
@@ -54,11 +55,11 @@
   aside {
     position: sticky;
     top: 15px;
+    flex-basis: 34%;
     > div {
       margin-left: 15px;
       box-sizing: border-box;
       background-color: #ffffff;
-      width: 325px;
       margin-bottom: 15px;
       box-sizing: border-box;
       border-radius: 2px;

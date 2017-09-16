@@ -1,6 +1,8 @@
 #archive {
+  width: 1000px;
   .content {
     @include left-container;
+    align-self: flex-start;
     .year-list {
       padding: 20px 25px 15px;
       border-bottom: 1px solid rgba(178, 186, 194, .15);
@@ -31,5 +33,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  #archive {
+    width: 100%;
+    box-sizing: border-box;
   }
 }

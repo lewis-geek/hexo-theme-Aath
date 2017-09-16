@@ -1,6 +1,7 @@
 #tags {
   .tags-container {
     @include left-container;
+    width: 66%;
     padding: 0;
   }
   .tags {

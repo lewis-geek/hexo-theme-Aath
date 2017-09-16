@@ -1,7 +1,9 @@
 #post {
+  width: 1000px;
   .content {
     article {
       @include left-container;
+      width: 100%;
       padding: 20px 25px;
       border-bottom: 1px solid rgba(178, 186, 194, .15);
       border-bottom-left-radius: 0;
@@ -9,57 +11,70 @@
     }
     > .comment {
       @include left-container;
+      width: 100%;
       padding: 20px 25px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      flex-grow: 1;
     }
   }
+  > .content {
+    width: 66%;
+  } 
   aside {
-    @include aside;
-    h1 {
-      font-size: 1.1em;
-      padding-left: 20px;
-      margin: 0;
-      height: 45px;
-      line-height: 45px;
-      box-sizing: border-box;
-      border-bottom: 1px solid rgba(178,186,194,.15);
-      font-weight: normal;
-    }
-    .content {
-      padding: 20px;
-      font-size: 1em;
-    }
-    ol {
-      list-style: none;
-      &.toc {
+    flex-basis: 34%;
+    .toc-container {
+      @include aside;
+      h1 {
+        font-size: 1.1em;
+        padding-left: 20px;
         margin: 0;
-        padding-left: 0;
-        .toc-level-1 {
-          > ol {
-            padding-left: 1.1em;
-          }
-        }
-        .toc-level-2 {
-          > ol {
-            padding-left: 1.2em;
-          }
-        }
-        .toc-level-3 {
-          > ol {
-            padding-left: 2em;
-          }
-        }
+        height: 45px;
+        line-height: 45px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(178,186,194,.15);
+        font-weight: normal;
       }
-      a {
-        transition: $transition;
-        &:hover,
-        &.active {
-          color: $hover-color;
+      .content {
+        padding: 20px;
+        font-size: 1em;
+      }
+      ol {
+        list-style: none;
+        &.toc {
+          margin: 0;
+          padding-left: 0;
+          .toc-level-1 {
+            > ol {
+              padding-left: 1.1em;
+            }
+          }
+          .toc-level-2 {
+            > ol {
+              padding-left: 1.2em;
+            }
+          }
+          .toc-level-3 {
+            > ol {
+              padding-left: 2em;
+            }
+          }
+        }
+        a {
+          transition: $transition;
+          &:hover,
+          &.active {
+            color: $hover-color;
+          }
         }
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  #post {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
