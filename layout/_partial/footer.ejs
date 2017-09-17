@@ -14,17 +14,17 @@
 <script src="http://olnzpdi2u.bkt.clouddn.com/in-view.min.js"></script>
 <script>
   var isDown = true
-  var scrollY = 0
+  var oldY = 0
   inView.offset(50)
 
   window.addEventListener('scroll', e => {
     var currentY = window.scrollY
-    if((scrollY - currentY) < 0) {
+    if((oldY - currentY) < 0) {
       isDown = true
     } else {
       isDown = false
     }
-    scrollY = currentY
+    oldY = currentY
   })
 
   $("article img").each(function() {
