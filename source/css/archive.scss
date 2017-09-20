@@ -42,3 +42,11 @@
     box-sizing: border-box;
   }
 }
+
+@media (max-width: $breakpoint-phone) {
+  #archive {
+    .content {
+      width: 100%;
+    }
+  }
+}
