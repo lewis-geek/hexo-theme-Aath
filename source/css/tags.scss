@@ -72,3 +72,11 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-phone) {
+  #tags {
+    .tags-container {
+      width: 100%;
+    }
+  }
+}
