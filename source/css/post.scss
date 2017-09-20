@@ -78,6 +78,33 @@
   }
 }
 
+@media (max-width: $breakpoint-phone) {
+  #post {
+    flex-direction: column;
+    > .content {
+      order: 1;
+      width: 100%;
+    }
+    aside {
+      order: 0;
+      .toc-container {
+        margin-left: 0;
+        ol {
+          a {
+            &.active {
+              color: #909090;
+            }
+          }
+        }
+      }
+      > div {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
 .markdown-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
