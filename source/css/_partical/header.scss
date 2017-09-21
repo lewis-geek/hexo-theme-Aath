@@ -33,3 +33,16 @@ header {
     }
   }
 }
+
+@media (max-width: $breakpoint-phone) {
+  header {
+    .right-header {
+      li.nav-item {
+        padding: 0 0 0 5px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
