@@ -17,6 +17,8 @@
   var oldY = 0
   inView.offset(50)
 
+  document.body.addEventListener('touchstart', function(){});
+  
   window.addEventListener('scroll', e => {
     var currentY = window.scrollY
     if((oldY - currentY) < 0) {
