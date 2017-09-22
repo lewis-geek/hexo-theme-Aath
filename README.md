@@ -9,7 +9,7 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 ## 安装
 
 ```bash
-$ git clone https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
+$ git clone -b master https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
 ```
 
 ## 配置
