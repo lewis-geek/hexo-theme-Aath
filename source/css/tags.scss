@@ -10,19 +10,21 @@
     a,
     .tag {
       display: inline-block;
-      border-radius: 999em;
       padding: 0 10px;
-      color: #ffffff;
-      line-height: 24px;
+      line-height: 1.6em;
       font-size: 14px;
       text-decoration: none;
-      margin: 0 1px;
       margin-bottom: 6px;
-      background-color: rgb(187, 187, 238);
+      cursor: pointer;
+      border: 1px solid #6E7173;
+      border-radius: 20px;
+      color: #404040;
+      font-weight: 200;
       transition: $transition;
       &:hover,
       &:active {
         color: white;
+        border-color: $hover-color;
         background-color: $hover-color;
       }
     }
