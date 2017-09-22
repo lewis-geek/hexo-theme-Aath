@@ -1,6 +1,10 @@
 # Aath
 
-模仿了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/timeline)的设计元素
+Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/timeline)的部分设计
+
+## [Demo](http://lewis.suclub.cn/)
+
+![Aath](http://olnzpdi2u.bkt.clouddn.com/flat-devices.png)
 
 ## 安装
 
@@ -34,4 +38,4 @@ Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片�
 
 ### markdown
 
-使用 GitHub 的 markdown 样式
+使用 GitHub 的 markdown 样式。
