@@ -113,6 +113,12 @@
   }
 }
 
+@media (min-width: $breakpoint-desktop) {
+  #index {
+    width: 1000px;
+  }
+}
+
 @media (max-width: $breakpoint-phone) {
   #index {
     flex-direction: column;
