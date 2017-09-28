@@ -10,8 +10,16 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 
 ###  主题
 
+#### 最新 release 版
+
 ```bash
 $ git clone -b master https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
+```
+
+#### 开发版
+
+```bash
+$ git clone -b develop https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
 ```
 
 ### 依赖
@@ -65,16 +73,30 @@ menu:
 favicon: /favicon.ico
 ```
 
+### About 页面
+
+如果需要生成 about 页面，需要在 source 目录下创建一个 about 目录，并在 about 目录下创建一个 index.md 文件，为该文件添加 `layout: about` 属性。此时就可在 `<your_url>/about` 路径访问到 about 页面了。
+
+### Tags 页面
+
+如果需要生成 tags 页面，需要在 source 目录下创建一个 tags 目录，并在 tags 目录下创建一个 index.md 文件，为该文件添加 `layout: tags` 属性。此时就可在 `<your_url>/tags` 路径访问到 tags 页面了。
+
 ## 特性
 
 ### fancybox
 
 Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片。
 
-### catalog
+### 文章目录
 
-自动为文章生成多级目录。
+自动为文章生成多级目录，目录样式使用了 `position: sticky` 属性，实现了下图的效果，这是一个较新的属性，部分浏览器不支持。  
+
+![menu](http://olnzpdi2u.bkt.clouddn.com/menu.gif)
 
 ### markdown
 
-使用 GitHub 的 markdown 样式。
+使用 GitHub 的 markdown 样式。  
+
+#### 文章列表描述
+
+在 markdown 文件顶部添加 `description` 属性，可以在首页文章列表显示文章的描述，如果没有这个属性，会自动截取文章内容作为文章的描述。
