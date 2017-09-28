@@ -11,7 +11,7 @@
 
 <%if(is_post() || is_current('about')) { %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://olnzpdi2u.bkt.clouddn.com/in-view.min.js"></script>
+<%- js('lib/in-view.min.js') %>
 <script>
   var isDown = true
   var oldY = 0
