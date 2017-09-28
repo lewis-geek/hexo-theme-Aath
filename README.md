@@ -91,7 +91,7 @@ Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片�
 
 自动为文章生成多级目录，目录样式使用了 `position: sticky` 属性，实现了下图的效果，这是一个较新的属性，部分浏览器不支持。  
 
-![menu](http://olnzpdi2u.bkt.clouddn.com/menu.gif)
+![menu](http://olnzpdi2u.bkt.clouddn.com/menu-new.gif)
 
 ### markdown
 
