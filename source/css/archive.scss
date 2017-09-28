@@ -36,6 +36,12 @@
   }
 }
 
+@media (min-width: $breakpoint-desktop) {
+  #archive {
+    width: 1000px;
+  }
+}
+
 @media (max-width: $breakpoint-desktop) {
   #archive {
     width: 100%;
