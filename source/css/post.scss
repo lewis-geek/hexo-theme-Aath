@@ -71,6 +71,12 @@
   }
 }
 
+@media (min-width: $breakpoint-desktop) {
+  #post {
+    width: 1000px;
+  }
+}
+
 @media (max-width: $breakpoint-desktop) {
   #post {
     width: 100%;
