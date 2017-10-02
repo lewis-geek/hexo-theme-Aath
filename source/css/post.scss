@@ -466,6 +466,20 @@
     table {
       tr {
         border-top: none;
+        background-color: transparent;
+      }
+      td {
+        padding: 0;
+        border: none;
+        .line {
+          height: 17px;
+        }
+      }
+      .code {
+        vertical-align: top;
+        pre {
+          padding-left: 0;
+        }
       }
     }
   }
