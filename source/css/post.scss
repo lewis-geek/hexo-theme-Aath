@@ -475,11 +475,13 @@
           height: 17px;
         }
       }
+      .gutter {
+        pre {
+          padding-right: 0
+        }
+      }
       .code {
         vertical-align: top;
-        pre {
-          padding-left: 0;
-        }
       }
     }
   }
