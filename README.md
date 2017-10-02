@@ -39,7 +39,9 @@ theme: aath
 
 # Comment
 ## disqus
+## livere
 disqus_shortname: your_disqus_shortname
+livere_uid: your_livere_uid
 
 #lewis-theme
 # favicon
