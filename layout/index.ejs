@@ -29,9 +29,6 @@
         </div>
       </section>
     <%})%>
-    <% if (page.total > 1){ %>
-      <%- partial('_partial/paging') %>
-    <% } %>
   </div>
   <aside>
     <div class="search">
@@ -66,3 +63,6 @@
     <% } %>
   </aside>
 </main>
+<% if (page.total > 1){ %>
+  <%- partial('_partial/paging') %>
+<% } %>
