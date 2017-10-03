@@ -113,9 +113,49 @@
   }
 }
 
+.paging {
+  @include basic;
+  padding-top: 1em;
+  .paging-container {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    &> div {
+      display: inline-block;
+      border-radius: 2px;
+      font-size: 14px;
+      transition: $transition;
+      a {
+        display: inline-block;
+        padding: 5px 15px;
+      }
+      &:hover {
+        border-color: #999;
+      }
+    }
+    .page-prev {
+      border: 1px solid #ddd;
+    }
+    .page-next {
+      text-align: right;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
 @media (min-width: $breakpoint-desktop) {
   #index {
     width: 1000px;
+  }
+  .paging {
+    width: 1000px;
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .paging {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -132,6 +172,11 @@
       > div {
         margin-left: 0;
       }
+    }
+  }
+  .paging {
+    .paging-container {
+      width: 100%;
     }
   }
 }

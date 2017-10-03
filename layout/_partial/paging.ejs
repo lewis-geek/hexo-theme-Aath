@@ -1,8 +1,16 @@
 <div class="paging">
-  <% if (page.prev) { %>
-    <a href="<%- url_for(page.prev_link) %>"><span class="page-arrow">← </span>前一页</a>
-  <% } %>
-  <% if (page.next) { %>
-    <a href="<%- url_for(page.next_link) %>">下一页<span class="page-arrow"> →</span></a>
-  <% } %>
+  <div class="paging-container">
+    <% if (page.prev) { %>
+    <div class='page-prev'>
+      <a href="<%- url_for(page.prev_link) %>">上一页</a>
+    </div>
+    <% } else { %>
+    <div></div>    
+    <% } %>
+    <% if (page.next) { %>
+    <div class='page-next'>
+      <a href="<%- url_for(page.next_link) %>">下一页</a>
+    </div>
+    <% } %>
+  </div>
 </div>
