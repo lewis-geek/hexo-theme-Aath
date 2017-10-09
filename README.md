@@ -4,7 +4,7 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 
 ## [Demo](http://lewis.suclub.cn/)
 
-![Aath](http://olnzpdi2u.bkt.clouddn.com/flat-devices.png)
+![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled%202.png)
 
 ## 安装
 
@@ -37,13 +37,17 @@ hexo 有两个配置文件，一个在 hexo 项目的根目录，另一个在主
 ```yaml
 theme: aath
 
+# highlight
+## line_number
+highlight:
+  line_number: false
+
 # Comment
 ## disqus
 ## livere
 disqus_shortname: your_disqus_shortname
 livere_uid: your_livere_uid
 
-#lewis-theme
 # favicon
 favicon: /favicon.ico
 
