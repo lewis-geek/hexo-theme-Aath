@@ -20,6 +20,24 @@
           transition: $transition;
         }
       }
+      .post-img {
+        margin-bottom: 5px;
+        transition: $transition;
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+      .post-content {
+        color: #a3a3a3;
+        margin-bottom: 8px;
+        transition: $transition;
+        * {
+          margin: 0;
+          padding: 0;
+          text-align: justify;
+        }
+      }
       .post-meta {
         font-size: 14px;
         font-weight: 200;
@@ -37,19 +55,6 @@
             border-color: $hover-color;
             background-color: $hover-color;
           }
-        }
-      }
-      .post-content {
-        color: #a3a3a3;
-        margin-bottom: 8px;
-        transition: $transition;
-        &:hover {
-          color: $hover-color;
-        }
-        * {
-          margin: 0;
-          padding: 0;
-          text-align: justify;
         }
       }
     }

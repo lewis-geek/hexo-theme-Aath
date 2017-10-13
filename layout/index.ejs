@@ -6,21 +6,26 @@
           <h3 class='post-head'>
             <%- post.title %>
           </h3>
-          <div class="post-content">
-            <% if (post.description) {%>
-              <%- post.description %>
-            <% } else if (post.excerpt) {%>
-              <%- post.excerpt %>
-            <% } else if (post.content) {%>
-              <% var br = post.content.indexOf('\n') %>
-                <% if(br < 0) {%>
-                  <%- post.content %>
-                <% } else {%>
-                  <%- post.content.substring(0, br) %>
-                <% } %>
-            <% } %>
-          </div>
         </a>
+        <% if (post.img) {%>
+          <div class="post-img">
+            <img src="<%= post.img %>" alt="">
+          </div>
+        <%}%>
+        <div class="post-content">
+          <% if (post.description) {%>
+            <%- post.description %>
+          <% } else if (post.excerpt) {%>
+            <%- post.excerpt %>
+          <% } else if (post.content) {%>
+            <% var br = post.content.indexOf('\n') %>
+              <% if(br < 0) {%>
+                <%- post.content %>
+              <% } else {%>
+                <%- post.content.substring(0, br) %>
+              <% } %>
+          <% } %>
+        </div>
         <div class='post-meta'>
           <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, "YYYY年MM月DD日")%></time> |
           <% if (post.tags && post.tags.length) { %>
