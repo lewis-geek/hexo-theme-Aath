@@ -8,7 +8,7 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 
 ## 安装
 
-###  主题
+### 主题
 
 #### 最新 release 版
 
@@ -101,6 +101,12 @@ Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片�
 
 使用 GitHub 的 markdown 样式。  
 
-#### 文章列表描述
+### 文章列表
+
+#### 文章图片
+
+在 markdown 文件顶部添加 `img` 属性，属性值为图片地址。
+
+#### 文章描述
 
 在 markdown 文件顶部添加 `description` 属性，可以在首页文章列表显示文章的描述，如果没有这个属性，会自动截取文章内容作为文章的描述。
