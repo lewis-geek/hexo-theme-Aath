@@ -105,7 +105,7 @@ Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片�
 
 #### 文章图片
 
-在 markdown 文件顶部添加 `img` 属性，属性值为图片地址。
+在 markdown 文件顶部添加 `img` 属性，属性值为图片地址。
 
 #### 文章描述
 
