@@ -84,6 +84,13 @@
         color: #909090;
         padding: 20px;
         font-size: 1em;
+        .category-list {
+          padding-left: 0;
+          margin: 0;
+        }
+        .category-list-child {
+          padding-left: 1em;
+        }
       }
     }
     .search {
