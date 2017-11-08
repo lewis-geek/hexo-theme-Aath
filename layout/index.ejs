@@ -27,9 +27,9 @@
           <% } %>
         </div>
         <div class='post-meta'>
-          <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, "YYYY年MM月DD日")%></time> |
+          <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, "YYYY年MM月DD日")%></time>
           <% if (post.tags && post.tags.length) { %>
-            <%- partial('_partial/tag', { tags: post.tags }) %>
+            | <%- partial('_partial/tag', { tags: post.tags }) %>
           <% } %>
         </div>
       </section>
@@ -52,6 +52,18 @@
                 <span><%- config['aside-description'] %></span>
             </div>
           <% } %>
+      </div>
+    <% } %>
+    <% if(site.categories.length) { %>
+      <div class="categories">
+        <h1>
+          文章分类
+        </h1>
+        <div class="content">
+          <%- list_categories({
+            show_count: false
+          }) %>
+        </div>
       </div>
     <% } %>
     <% if(config.links) { %>
