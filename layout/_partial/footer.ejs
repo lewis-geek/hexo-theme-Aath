@@ -12,6 +12,7 @@
 <%if(is_post() || is_current('about')) { %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <%- js('lib/in-view.min.js') %>
+<%- js('lib/lodash.min.js') %>
 <script>
   var isDown = true
   var oldY = 0
@@ -19,7 +20,7 @@
 
   document.body.addEventListener('touchstart', function(){});
   
-  window.addEventListener('scroll', e => {
+  window.addEventListener('scroll', _.throttle(e => {
     var currentY = window.scrollY
     if((oldY - currentY) < 0) {
       isDown = true
@@ -27,7 +28,7 @@
       isDown = false
     }
     oldY = currentY
-  })
+  }, 250))
 
   $("article img").each(function() {
       var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
