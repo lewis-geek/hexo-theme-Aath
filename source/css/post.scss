@@ -21,17 +21,13 @@
       font-weight: 200;
       color: #6E7173;
       margin-bottom: 11px;
-      .tag {
-        display: inline-block;
-        padding: 0 10px;
-        cursor: pointer;
-        border: 1px solid #6E7173;
-        border-radius: 20px;
-        transition: $transition;
+      font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+      a {
+        color: #404040;
+        font-size: 14px;
+        font-weight: 200;
         &:hover {
-          color: #ffffff;
-          border-color: $hover-color;
-          background-color: $hover-color;
+          color: $hover-color;
         }
       }
     }

@@ -1,0 +1,14 @@
+.post-meta {
+  .tag {
+    position: relative;
+    padding-right: 4px;
+    &:not(:last-of-type)::after {
+      content: '·';
+      position: absolute;
+      right: -4px;
+    }
+    &:hover::after {
+      color: #6E7173;
+    }
+  }
+}

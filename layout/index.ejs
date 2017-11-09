@@ -4,7 +4,7 @@
       <section>
         <a href="<%- url_for(post.path) %>">
           <h3 class='post-head'>
-            <%- post.title %>
+            <%- post.title ? post.title : '无标题'%>
           </h3>
         </a>
         <% if (post.img) {%>
@@ -28,14 +28,23 @@
         </div>
         <div class='post-meta'>
           <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, "YYYY年MM月DD日")%></time>
-          <% if (post.tags && post.tags.length) { %>
-            | <%- partial('_partial/tag', { tags: post.tags }) %>
+          <% if(post.categories.length) { %>
+            | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: post }) %>
+          <% } %>
+          <% if(post.tags && post.tags.length) { %>
+            | <% if (post.tags.length > 1) { %>
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              <% } else {%>
+                <i class="fa fa-tag" aria-hidden="true"></i>
+              <% } %>
+             <%- partial('_partial/tag', { tags: post.tags }) %>
           <% } %>
         </div>
       </section>
     <%})%>
   </div>
   <aside>
+    <% if(config.search) { %>
     <div class="search">
       <div class="content">
         <form action="//www.google.com/search" target="_blank" class="search-form">
@@ -44,6 +53,7 @@
         </form>
       </div>
     </div>
+    <% } %>
     <% if(config.avatar) { %>
       <div class="avatar">
         <img src="<%- config.avatar %>" alt="avatar">
@@ -73,7 +83,7 @@
         </h1>
         <div class="content">
           <% for(let i in config.links) { %>
-            <a href="<%- config.links[i] %>"><%- i %></a>
+            <a href="<%- config.links[i] %>" target="_blank"><%- i %></a>
           <% } %>
         </div>
       </div>
