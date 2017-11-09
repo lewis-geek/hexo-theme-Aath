@@ -53,11 +53,13 @@ main {
   @include basic;
 }
 
-@import 'css/_partical/footer.scss';
+@import 'css/_partical/categories';
+@import 'css/_partical/footer';
 @import 'css/_partical/header';
+@import 'css/_partical/tag';
 
-@import 'css/archive.scss';
-@import 'css/about.scss';
+@import 'css/archive';
+@import 'css/about';
 @import 'css/post';
 @import 'css/index';
-@import 'css/tags.scss';
+@import 'css/tags';
