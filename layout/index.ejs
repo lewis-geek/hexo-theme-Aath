@@ -5,6 +5,7 @@
         <a href="<%- url_for(post.path) %>">
           <h3 class='post-head'>
             <%- post.title %>
+            <%- post.title ? post.title : '无标题'%>
           </h3>
         </a>
         <% if (post.img) {%>

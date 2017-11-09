@@ -3,6 +3,7 @@
     <article>
         <section class="content markdown-body">
           <h1><%= page.title %></h1>
+          <h1><%= page.title ? page.title : '无标题' %></h1>
           <div class='post-meta'>
             <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(page.date, "YYYY年MM月DD日")%></time>
             <% if (page.tags && page.tags.length) { %>
