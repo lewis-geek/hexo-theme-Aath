@@ -4,7 +4,7 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 
 ## [Demo](http://lewis.suclub.cn/)
 
-![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-mini.png)
+![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
 
 ## 安装
 
