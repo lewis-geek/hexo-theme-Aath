@@ -32,7 +32,8 @@
             | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: post }) %>
           <% } %>
           <% if(post.tags && post.tags.length) { %>
-            | <% if (post.tags.length > 1) { %>
+            <span class="seperator">|</span>
+             <% if (post.tags.length > 1) { %>
                 <i class="fa fa-tags" aria-hidden="true"></i>
               <% } else {%>
                 <i class="fa fa-tag" aria-hidden="true"></i>
