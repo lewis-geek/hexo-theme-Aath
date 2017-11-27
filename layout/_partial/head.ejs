@@ -12,6 +12,9 @@
     if (is_archive()){
       title = '归档';
     }
+    if (is_category()){
+      title = page.category
+    }
   %>  
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <%- css('style') %>

@@ -1,0 +1,32 @@
+<main id="archive">
+  <div class="content">
+    <% 
+      var years = {};
+      site.categories.findOne({name: page.category }).posts.sort('date').reverse().forEach(function(post){
+          console.log(page)
+          var year = post.date.year()
+          if(years[year]===undefined){
+              years[year] = [];
+          }
+          years[year].push(post);
+      });
+    %>    
+    <% Object.keys(years).reverse().forEach(function(year){  %>
+      <div class="year-list">
+        <h3><%= year %></h3>
+        <ul>
+          <% years[year].map(function(post){  %>
+            <li >
+              <time><%= post.date.format('YYYY/MM/DD') %></time>
+              <a href="<%- config.root %><%- post.path %>">
+                <span>
+                    <%- post.title ? post.title : '无标题' %>
+                </span>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    <% }) %>
+  </div>
+</main>
