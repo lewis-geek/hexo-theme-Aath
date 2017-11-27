@@ -2,7 +2,7 @@
   <div class="content">
     <% 
       var years = {};
-      page.posts.sort('date').reverse().forEach(function(post){
+      site.posts.sort('date').reverse().forEach(function(post){
           var year = post.date.year()
           if(years[year]===undefined){
               years[year] = [];
