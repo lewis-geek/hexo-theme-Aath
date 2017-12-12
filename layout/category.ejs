@@ -3,7 +3,6 @@
     <% 
       var years = {};
       site.categories.findOne({name: page.category }).posts.sort('date').reverse().forEach(function(post){
-          console.log(page)
           var year = post.date.year()
           if(years[year]===undefined){
               years[year] = [];
