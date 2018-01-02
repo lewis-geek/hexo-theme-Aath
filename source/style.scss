@@ -32,6 +32,10 @@ $breakpoint-phone: 700px;
   box-sizing: border-box;
 }
 
+html {
+  background-color: #f4f5f5;
+}
+
 body {
   font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
   margin: 0;
@@ -58,8 +62,8 @@ main {
 @import 'css/_partical/header';
 @import 'css/_partical/tag';
 
-@import 'css/archive';
-@import 'css/about';
-@import 'css/post';
-@import 'css/index';
-@import 'css/tags';
+@import 'css/_archive';
+@import 'css/_about';
+@import 'css/_post';
+@import 'css/_index';
+@import 'css/_tags';
