@@ -5,6 +5,7 @@
   .posts-list {
     @include left-container;
     flex-basis: 66%;
+    align-self: flex-start;
     section {
       padding: 20px 25px;
       border-bottom: 1px solid rgba(178,186,194,.15);
