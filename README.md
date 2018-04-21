@@ -1,112 +1,114 @@
 # Aath
 
-Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/timeline)的部分设计
+English version 
+
+Aath refers to the partial design of [Kuruya] (https://www.zhihu.com/) and [Nuggets] (https://juejin.im/timeline).
 
 ## [Demo](http://lewis.suclub.cn/)
 
 ![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
 
-## 安装
+## Installation
 
-### 主题
+### Theme
 
-#### 最新 release 版
+#### latest release
 
 ```bash
 $ git clone -b master https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
 ```
 
-#### 开发版
+#### beta version
 
 ```bash
 $ git clone -b develop https://github.com/lewis-geek/hexo-theme-Aath.git themes/aath
 ```
 
-### 依赖
+### Dependence
 
 ```bash
 $ npm install --save hexo-renderer-sass
 ```
 
-## 配置
+## Configuration
 
-hexo 有两个配置文件，一个在 hexo 项目的根目录，另一个在主题文件夹的根目录，文件名都是均为 `_config.yml` 。
+There are two configuration files for hexo, one in the root directory of the hexo project and the other in the root directory of the theme folder. The file names are both `_config.yml`.
 
-### 项目配置
+### Project Configuration
 
 ```yaml
-theme: aath
+Theme: aath
 
 # highlight
 ## line_number
-highlight:
-  line_number: false
+Highlight:
+  Line_number: false
 
 # Comment
 ## disqus
 ## livere
-disqus_shortname: your_disqus_shortname
-livere_uid: your_livere_uid
+Disqus_shortname: your_disqus_shortname
+Livere_uid: your_livere_uid
 
 # favicon
-favicon: /favicon.ico
+Favicon: /favicon.ico
 
 # Aside
 ## search
 ## avatar
 ## aside-description
 ## links
-search: true
-avatar: http://olnzpdi2u.bkt.clouddn.com/avatar.jpg
-aside-description: aside-description
-links:
-  百度: https://www.baidu.com/
-  谷歌: https://www.google.com/
-  知乎: https://www.zhihu.com/
+Search: true
+Avatar: http://olnzpdi2u.bkt.clouddn.com/avatar.jpg
+Aside-description: aside-description
+Links:
+  Baidu: https://www.baidu.com/
+  Google: https://www.google.com/
+  Zhihu: https://www.zhihu.com/
 ```
 
-### 主题配置
+### topic configuration
 
 ```yaml
 # main menu navigation
-menu:
-  首页: /
-  关于: /about
-  归档: /archives
-  标签: /tags
+Menu:
+  Home: /
+  About: /about
+  Archive: /archives
+  Tags: /tags
 
 # Miscelaneous
-favicon: /favicon.ico
+Favicon: /favicon.ico
 ```
 
-### About 页面
+### About page
 
-如果需要生成 about 页面，需要在 source 目录下创建一个 about 目录，并在 about 目录下创建一个 index.md 文件，为该文件添加 `layout: about` 属性。此时就可在 `<your_url>/about` 路径访问到 about 页面了。
+If you need to generate the about page, you need to create an about directory in the source directory and create an index.md file in the about directory to add the `layout: about` attribute to the file. You can access the about page in the `<your_url>/about` path.
 
-### Tags 页面
+### Tags page
 
-如果需要生成 tags 页面，需要在 source 目录下创建一个 tags 目录，并在 tags 目录下创建一个 index.md 文件，为该文件添加 `layout: tags` 属性。此时就可在 `<your_url>/tags` 路径访问到 tags 页面了。
+If you need to generate tags pages, you need to create a tags directory in the source directory, create an index.md file in the tags directory, and add the `layout: tags` attribute to the file. At this point you can access the tags page in the `<your_url>/tags` path.
 
-## 特性
+## Features
 
 ### fancybox
 
-Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片。
+Aath used [fancyBox] (http://fancyapps.com/fancybox/) to browse through the pictures in the article.
 
-### 文章目录
+### Article Directory
 
-自动为文章生成多级目录，目录样式使用了 `position: sticky` 属性，实现了目录相对浏览器固定的效果，这是一个较新的属性，需要浏览器支持。  
+Automatic generation of multi-level directories for the article. The directory style uses the `position: sticky` attribute, which achieves a fixed directory-browser effect. This is a newer attribute and requires browser support.
 
 ### markdown
 
-使用 GitHub 的 markdown 样式。  
+Use the GitHub's markdown style.
 
-### 文章列表
+### Article list
 
-#### 文章图片
+#### Article Image
 
-在 markdown 文件顶部添加 `img` 属性，属性值为图片地址。
+Add the `img` attribute at the top of the markdown file. The attribute value is the picture address.
 
-#### 文章描述
+#### Article description
 
-在 markdown 文件顶部添加 `description` 属性，可以在首页文章列表显示文章的描述，如果没有这个属性，会自动截取文章内容作为文章的描述。
+Add the `description` attribute at the top of the markdown file to display the description of the article in the top article list. If there is no such attribute, the article content will be automatically intercepted as a description of the article.
