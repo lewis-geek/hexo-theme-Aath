@@ -16,10 +16,10 @@
         <ul>
           <% years[year].map(function(post){  %>
             <li >
-              <time><%= post.date.format('YYYY/MM/DD') %></time>
+              <time><%= post.date.format(__('date_format')) %></time>
               <a href="<%- config.root %><%- post.path %>">
                 <span>
-                    <%- post.title ? post.title : '无标题' %>
+                    <%- post.title ? post.title : __('untitled')%>
                 </span>
               </a>
             </li>

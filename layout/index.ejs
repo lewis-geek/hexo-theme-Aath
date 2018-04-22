@@ -4,7 +4,7 @@
       <section>
         <a href="<%- url_for(post.path) %>">
           <h3 class='post-head'>
-            <%- post.title ? post.title : '无标题'%>
+            <%- post.title ? post.title : __('untitled')%>
           </h3>
         </a>
         <% if (post.img) {%>
@@ -27,7 +27,7 @@
           <% } %>
         </div>
         <div class='post-meta'>
-          <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, "YYYY年MM月DD日")%></time>
+          <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, __('date_format'))%></time>
           <% if(post.categories.length) { %>
             | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: post }) %>
           <% } %>
@@ -49,7 +49,7 @@
     <div class="search">
       <div class="content">
         <form action="//www.google.com/search" target="_blank" class="search-form">
-          <input type="text" name="q" maxlength="20" placeholder="搜索">
+          <input type="text" name="q" maxlength="20" placeholder=<%= __('search') %>>
           <input type="hidden" name='sitesearch' value="<%- config.url %>">
         </form>
       </div>
@@ -68,7 +68,7 @@
     <% if(site.categories.length) { %>
       <div class="categories">
         <h1>
-          文章分类
+          <%= __('categories') %>
         </h1>
         <div class="content">
           <%- list_categories({
@@ -80,7 +80,7 @@
     <% if(config.links) { %>
       <div class="links">
         <h1>
-          友情链接
+          <%= __('blogroll') %>
         </h1>
         <div class="content">
           <% for(let i in config.links) { %>

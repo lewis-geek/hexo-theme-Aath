@@ -1,8 +1,14 @@
-# Aath
+# [Aath](https://lewis-geek.github.io/hexo-theme-unit-test/)
+
+[English Documentation](https://github.com/lewis-geek/hexo-theme-Aath/blob/develop/README.en.md)
 
 Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/timeline)的部分设计
 
 ## [Demo](http://lewis.suclub.cn/)
+
+### [测试页面](https://lewis-geek.github.io/hexo-theme-unit-test/)
+
+### [代码例子](https://github.com/lewis-geek/hexo-theme-unit-test)
 
 ![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
 
@@ -95,11 +101,11 @@ Aath 使用 [fancyBox](http://fancyapps.com/fancybox/) 浏览文章中的图片�
 
 ### 文章目录
 
-自动为文章生成多级目录，目录样式使用了 `position: sticky` 属性，实现了目录相对浏览器固定的效果，这是一个较新的属性，需要浏览器支持。  
+自动为文章生成多级目录，目录样式使用了 `position: sticky` 属性，实现了目录相对浏览器固定的效果，这是一个较新的属性，需要浏览器支持。
 
 ### markdown
 
-使用 GitHub 的 markdown 样式。  
+使用 GitHub 的 markdown 样式。
 
 ### 文章列表
 

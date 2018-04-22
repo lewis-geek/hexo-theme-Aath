@@ -2,14 +2,14 @@
   <div class="paging-container">
     <% if (page.prev) { %>
     <div class='page-prev'>
-      <a href="<%- url_for(page.prev_link) %>">上一页</a>
+      <a href="<%- url_for(page.prev_link) %>"><%= __('prev') %></a>
     </div>
     <% } else { %>
     <div></div>    
     <% } %>
     <% if (page.next) { %>
     <div class='page-next'>
-      <a href="<%- url_for(page.next_link) %>">下一页</a>
+      <a href="<%- url_for(page.next_link) %>"><%= __('next') %></a>
     </div>
     <% } %>
   </div>

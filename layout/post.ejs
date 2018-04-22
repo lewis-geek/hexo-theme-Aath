@@ -2,9 +2,9 @@
   <div class="content">
     <article>
         <section class="content markdown-body">
-          <h1><%= page.title ? page.title : '无标题' %></h1>
+          <h1><%= page.title ? page.title : __('untitled') %></h1>
           <div class='post-meta'>
-            <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(page.date, "YYYY年MM月DD日")%></time>
+            <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(page.date, __('date_format'))%></time>
             <% if(page.categories && page.categories.length) { %>
               | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: page }) %>
             <% } %>
@@ -24,7 +24,7 @@
         <!-- disqus 评论框 start -->
         <div class="comment">
             <div id="disqus_thread" class="disqus-thread">
-              <i>加载评论框需要翻墙</i>
+              <i><%= __('over_the_wall') %></i>
             </div>
         </div>
         <!-- disqus 评论框 end -->
