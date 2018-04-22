@@ -1,8 +1,8 @@
 # Aath
 
-English version 
+English version
 
-Aath refers to the partial design of [Kuruya] (https://www.zhihu.com/) and [Nuggets] (https://juejin.im/timeline).
+Aath refers to the partial design of [知乎](https://www.zhihu.com/) and [掘金](https://juejin.im/timeline).
 
 ## [Demo](http://lewis.suclub.cn/)
 
@@ -93,7 +93,7 @@ If you need to generate tags pages, you need to create a tags directory in the s
 
 ### fancybox
 
-Aath used [fancyBox] (http://fancyapps.com/fancybox/) to browse through the pictures in the article.
+Aath used [fancyBox](http://fancyapps.com/fancybox/) to browse through the pictures in the article.
 
 ### Article Directory
 
