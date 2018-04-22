@@ -1,10 +1,14 @@
 # Aath
 
-English version
+[中文文档](https://github.com/lewis-geek/hexo-theme-Aath/blob/develop/README.md)
 
-Aath refers to the partial design of [知乎](https://www.zhihu.com/) and [掘金](https://juejin.im/timeline).
+Aath refers to the partial design of [zhihu](https://www.zhihu.com/) and [juejin](https://juejin.im/timeline).
 
 ## [Demo](http://lewis.suclub.cn/)
+
+### [test site](https://lewis-geek.github.io/hexo-theme-unit-test/)
+
+### [code samples](https://github.com/lewis-geek/hexo-theme-unit-test)
 
 ![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
 
