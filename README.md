@@ -1,4 +1,4 @@
-# [Aath](https://lewis-geek.github.io/hexo-theme-unit-test/)
+# Aath
 
 [English Documentation](https://github.com/lewis-geek/hexo-theme-Aath/blob/develop/README.en.md)
 
