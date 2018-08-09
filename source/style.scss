@@ -3,6 +3,7 @@ $transition: .3s color;
 $box-shadow: 0 2px 5px -2px rgba(0,0,0,.05);
 $breakpoint-desktop: 1032px;
 $breakpoint-phone: 700px;
+$animation-time: 0.3s;
 
 @mixin basic {
   max-width: 1000px;
