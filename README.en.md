@@ -10,7 +10,7 @@ Aath refers to the partial design of [zhihu](https://www.zhihu.com/) and [juejin
 
 ### [code samples](https://github.com/lewis-geek/hexo-theme-unit-test)
 
-![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
+![Aath](http://cdn.suclub.cn/Untitled-1880.png)
 
 ## Installation
 
