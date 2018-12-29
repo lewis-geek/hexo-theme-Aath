@@ -10,7 +10,7 @@ Aath 参考了[知乎](https://www.zhihu.com/)和[掘金](https://juejin.im/time
 
 ### [代码例子](https://github.com/lewis-geek/hexo-theme-unit-test)
 
-![Aath](http://olnzpdi2u.bkt.clouddn.com/Untitled-1880.png)
+![Aath](http://cdn.suclub.cn/Untitled-1880.png)
 
 ## 安装
 
