@@ -1,49 +1,64 @@
 <main id='post'>
   <div class="content">
     <article>
-        <section class="content markdown-body">
-          <h1><%= page.title ? page.title : __('untitled') %></h1>
-          <div class='post-meta'>
-            <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(page.date, __('date_format'))%></time>
-            <% if(page.categories && page.categories.length) { %>
-              | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: page }) %>
-            <% } %>
-            <% if(page.tags && page.tags.length) { %>
-              | <% if (page.tags.length > 1) { %>
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                <% } else {%>
-                  <i class="fa fa-tag" aria-hidden="true"></i>
-                <% } %>
-               <%- partial('_partial/tag', { tags: page.tags }) %>
-            <% } %>
-          </div>
-          <%- page.content %>
-        </section>
+      <section class="content markdown-body">
+        <h1>
+          <%= page.title ? page.title : __('untitled') %>
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            <%-date(page.date, __('date_format'))%></time>
+          <% if(page.categories && page.categories.length) { %>
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          <%- partial('_partial/categories', { post: page }) %>
+          <% } %>
+          <% if(page.tags && page.tags.length) { %>
+          |
+          <% if (page.tags.length > 1) { %>
+          <i class="fa fa-tags"
+            aria-hidden="true"></i>
+          <% } else {%>
+          <i class="fa fa-tag"
+            aria-hidden="true"></i>
+          <% } %>
+          <%- partial('_partial/tag', { tags: page.tags }) %>
+          <% } %>
+        </div>
+        <%- page.content %>
+      </section>
     </article>
     <% if(config['disqus_shortname']) { %>
-        <!-- disqus 评论框 start -->
-        <div class="comment">
-            <div id="disqus_thread" class="disqus-thread">
-              <i><%= __('over_the_wall') %></i>
-            </div>
-        </div>
-        <!-- disqus 评论框 end -->
+    <!-- disqus 评论框 start -->
+    <div class="comment">
+      <div id="disqus_thread"
+        class="disqus-thread">
+        <i>
+          <%= __('over_the_wall') %></i>
+      </div>
+    </div>
+    <!-- disqus 评论框 end -->
     <% } %>
     <% if(config['livere_uid']) { %>
-        <!-- livere 评论框 start -->
-        <div class="comment">
-            <div id="lv-container" data-id="city" data-uid="<%= config['livere_uid'] %>"></div>
-        </div>
-        <!-- livere 评论框 end -->
-    <% } %>    
+    <!-- livere 评论框 start -->
+    <div class="comment">
+      <div id="lv-container"
+        data-id="city"
+        data-uid="<%= config['livere_uid'] %>"></div>
+    </div>
+    <!-- livere 评论框 end -->
+    <% } %>
   </div>
   <aside>
     <% if(toc(page.content)) { %>
     <div class="toc-container">
-        <h1>目录</h1>
-        <div class="content">
-            <%- toc(page.content) %>
-        </div>
+      <h1>
+        <%=__('catalog')%>
+      </h1>
+      <div class="content">
+        <%- toc(page.content) %>
+      </div>
     </div>
     <% } %>
   </aside>
@@ -64,24 +79,24 @@
     var xhr = new XMLHttpRequest();
     var called = false;
     xhr.open('GET', url);
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
-      called = true;
-      cb(true);
+        called = true;
+        cb(true);
       }
     };
     xhr.send();
     // timeout 1s, this facebook API is very fast.
-    setTimeout(function() {
+    setTimeout(function () {
       if (!called) {
-      xhr.abort();
-      cb(false)
+        xhr.abort();
+        cb(false)
       }
     }, 1000);
   }
 
   function getDisqus(isAgent) {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; 
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
     dsq.async = true
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
@@ -91,16 +106,16 @@
 <% } %>
 <% if (config['livere_uid']) { %>
 <script type="text/javascript">
-  (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
+  (function (d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
-      if (typeof LivereTower === 'function') { return; }
+    if (typeof LivereTower === 'function') { return; }
 
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
 
-      e.parentNode.insertBefore(j, e);
+    e.parentNode.insertBefore(j, e);
   })(document, 'script');
 </script>
 <% } %>
