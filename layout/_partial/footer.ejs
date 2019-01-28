@@ -1,71 +1,63 @@
 <footer>
   <div class="copyright">
     <div>
-      &copy; <%= new Date().getFullYear() %> | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp
+      &copy;
+      <%= new Date().getFullYear() %> | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
     </div>
     <div>
-      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath" target="_blank">Aath</a>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
     </div>
   </div>
 </footer>
 
 <%if(is_post() || is_current('about')) { %>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<%- js('lib/in-view.min.js') %>
+<%- js('lib/ScrollMagic.min.js') %>
 <%- js('lib/lodash.min.js') %>
 <script>
-  var isDown = true
-  var oldY = 0
-  inView.offset(50)
+  document.body.addEventListener('touchstart', function () { });
 
-  document.body.addEventListener('touchstart', function(){});
-  
-  window.addEventListener('scroll', _.throttle(e => {
-    var currentY = window.scrollY
-    if((oldY - currentY) < 0) {
-      isDown = true
-    } else {
-      isDown = false
-    }
-    oldY = currentY
-  }, 250))
-
-  $("article img").each(function() {
-      var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
-      $(this).wrapAll(strA);
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
   });
 
-  $('.toc-link').each(function() {
-      var href = $(this).attr("href");
-      
-      inView(href).on('exit', () => {
-        if (isDown) {
-          handleActive(href)
-        }
-      })
+  // 目录联动
+  let tocLinkList = $('.toc-link')
 
-      inView(href).on('enter', () => {
-        if (!isDown) {
-          handleActive(href)
-        }
-      })
-
-      this.onclick = function(e) {
-        var pos = $(href).offset().top - 10;
-        $("html,body").animate({scrollTop: pos}, 300);
-        setTimeout(() => {
-          handleActive(href)
-        }, 350)
-        return false
-      }
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
   })
 
-  function handleActive(href) {
-    document.querySelectorAll('.toc-link').forEach(elm => {
-      elm.classList.remove('active')
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
     })
-    document.querySelector(".toc [href='"+ href +"']").classList.add('active')
-  }
+  })
 </script>
 <%- js('lib/jquery.fancybox.min.js') %>
 <% } %>
