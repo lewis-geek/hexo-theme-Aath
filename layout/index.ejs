@@ -1,96 +1,114 @@
 <main id='index'>
   <div class="posts-list">
     <% page.posts.forEach(post => {%>
-      <section>
-        <a href="<%- url_for(post.path) %>">
-          <h3 class='post-head'>
-            <%- post.title ? post.title : __('untitled')%>
-          </h3>
-        </a>
-        <% if (post.img) {%>
-          <div class="post-img">
-            <img src="<%= post.img %>" alt="">
-          </div>
-        <%}%>
-        <div class="post-content">
-          <% if (post.description) {%>
-            <%- post.description %>
-          <% } else if (post.excerpt) {%>
-            <%- post.excerpt %>
-          <% } else if (post.content) {%>
-            <% var br = post.content.indexOf('\n') %>
-              <% if(br < 0) {%>
-                <%- post.content %>
-              <% } else {%>
-                <%- post.content.substring(0, br) %>
-              <% } %>
-          <% } %>
-        </div>
-        <div class='post-meta'>
-          <i class="fa fa-calendar" aria-hidden="true"></i> <time><%-date(post.date, __('date_format'))%></time>
-          <% if(post.categories.length) { %>
-            | <i class="fa fa-folder-open-o" aria-hidden="true"></i> <%- partial('_partial/categories', { post: post }) %>
-          <% } %>
-          <% if(post.tags && post.tags.length) { %>
-            <span class="seperator">|</span>
-             <% if (post.tags.length > 1) { %>
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              <% } else {%>
-                <i class="fa fa-tag" aria-hidden="true"></i>
-              <% } %>
-             <%- partial('_partial/tag', { tags: post.tags }) %>
-          <% } %>
-        </div>
-      </section>
+    <section>
+      <a href="<%- url_for(post.path) %>">
+        <h3 class='post-head'>
+          <%- post.title ? post.title : __('untitled')%>
+        </h3>
+      </a>
+      <% if (post.img) {%>
+      <div class="post-img">
+        <img src="<%= post.img %>"
+          alt="">
+      </div>
+      <%}%>
+      <div class="post-content">
+        <% if (post.description) {%>
+        <%- post.description %>
+        <% } else if (post.excerpt) {%>
+        <%- post.excerpt %>
+        <% } else if (post.content) {%>
+        <% var br = post.content.indexOf('\n') %>
+        <% if(br < 0) {%>
+        <%- post.content %>
+        <% } else {%>
+        <%- post.content.substring(0, br) %>
+        <% } %>
+        <% } %>
+      </div>
+      <div class='post-meta'>
+        <i class="fa fa-calendar"
+          aria-hidden="true"></i> <time>
+          <%-date(post.date, __('date_format'))%></time>
+        <% if(post.categories.length) { %>
+        | <i class="fa fa-folder-open-o"
+          aria-hidden="true"></i>
+        <%- partial('_partial/categories', { post: post }) %>
+        <% } %>
+        <% if(post.tags && post.tags.length) { %>
+        <span class="separator">|</span>
+        <% if (post.tags.length > 1) { %>
+        <i class="fa fa-tags"
+          aria-hidden="true"></i>
+        <% } else {%>
+        <i class="fa fa-tag"
+          aria-hidden="true"></i>
+        <% } %>
+        <%- partial('_partial/tag', { tags: post.tags }) %>
+        <% } %>
+      </div>
+    </section>
     <%})%>
   </div>
   <aside>
     <% if(config.search) { %>
     <div class="search">
       <div class="content">
-        <form action="//www.google.com/search" target="_blank" class="search-form">
-          <input type="text" name="q" maxlength="20" placeholder=<%= __('search') %>>
-          <input type="hidden" name='sitesearch' value="<%- config.url %>">
+        <form action="//www.google.com/search"
+          target="_blank"
+          class="search-form">
+          <input type="text"
+            name="q"
+            maxlength="20"
+            placeholder=<%=__('search')%>>
+          <input type="hidden"
+            name='sitesearch'
+            value="<%- config.url %>">
         </form>
       </div>
     </div>
     <% } %>
     <% if(config.avatar) { %>
-      <div class="avatar">
-        <img src="<%- config.avatar %>" alt="avatar">
-          <% if(config['aside-description']) { %>
-            <div class="content">
-                <span><%- config['aside-description'] %></span>
-            </div>
-          <% } %>
+    <div class="avatar">
+      <img src="<%- config.avatar %>"
+        alt="avatar">
+      <% if(config['aside-description']) { %>
+      <div class="content">
+        <span>
+          <%- config['aside-description'] %></span>
       </div>
+      <% } %>
+    </div>
     <% } %>
     <% if(site.categories.length) { %>
-      <div class="categories">
-        <h1>
-          <%= __('categories') %>
-        </h1>
-        <div class="content">
-          <%- list_categories({
+    <div class="categories">
+      <h1>
+        <%= __('categories') %>
+      </h1>
+      <div class="content">
+        <%- list_categories({
             show_count: false
           }) %>
-        </div>
       </div>
+    </div>
     <% } %>
     <% if(config.links) { %>
-      <div class="links">
-        <h1>
-          <%= __('blogroll') %>
-        </h1>
-        <div class="content">
-          <% for(let i in config.links) { %>
-            <a href="<%- config.links[i] %>" target="_blank"><%- i %></a>
-          <% } %>
-        </div>
+    <div class="links">
+      <h1>
+        <%= __('blogroll') %>
+      </h1>
+      <div class="content">
+        <% for(let i in config.links) { %>
+        <a href="<%- config.links[i] %>"
+          target="_blank">
+          <%- i %></a>
+        <% } %>
       </div>
+    </div>
     <% } %>
   </aside>
 </main>
 <% if (page.total > 1){ %>
-  <%- partial('_partial/paging') %>
+<%- partial('_partial/paging') %>
 <% } %>
